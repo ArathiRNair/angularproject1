@@ -1,20 +1,31 @@
 <!DOCTYPE html>
+<html ng-app="campus360">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
     <title>Document</title>
 </head>
-<body>
-<<<<<<< HEAD
-    <h1><b>Student Details Campus360</b></h1>
-    <p>Name:Arathi</p>
-    <p>Age:22</p>
-    <p>Course:MCA</p>
-    <p>Semester:3</p>
-    <p>Year:2</p>
-=======
-    <h1>hello</h1>
->>>>>>> ee3cf1e662ed512b90454d578e7c74ac061343fc
+<body ng-controller="dashboardcontroller">
+    <input type="text" ng-model="collegename">
+    <h1>{{collegename}}</h1>
+    <p>Total Student:{{totalStudents}}</p>
+    <input type="text" ng-model="totalStudents">
+    <button ng-click="totalStudents=totalStudents+1">ADD STUDENT</button>
+    <p>Total Faculty:{{totalFaculty}}</p>
+    <input type="text" ng-model="totalFaculty">
+    <button ng-click="totalFaculty=totalFaculty+1">ADD STUDENT</button>
+     
+    <h2>Student List</h2>
+    <ul>
+        <li ng-repeat="student in students">
+            {{student}}
+        </li>
+
+
+    </ul>
 </body>
 </html>
