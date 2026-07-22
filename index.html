@@ -52,6 +52,33 @@
     <select ng-model="selectedDepartment" ng-options="department for department in departments"></select>
     <p>Selected Department:{{selectedDepartment}}</p>
 
+    <hr>
+    <h2>ng-init demo</h2>
+    <div ng-init="collegecode='fisat123';location='Angamaly'">
+    <p>college code:{{collegecode}}</p>
+    <p>location:{{location}}</p>
+    </div>
+
+    <hr>
+    <h2>ng-disable demo</h2>
+    <button ng-click="allowAdmission()">
+    Enable Admission
+    </button>
+    <br><br>
+
+     <button ng-disabled="isDisabled">
+        take admission
+     </button>
+     <hr>
+     <h2>ng-readonly demo</h2>
+     <label>college id</label>
+     <br><br>
+     <input type="text" ng-model="" ng-readonly="isReadonly">  
+     <br><br>
+     <button ng-click="isReadonly=!isReadonly">
+       toggle readonly
+     </button>
+     <p>readonly status: {{isReadonly}}</p>
 </body>
 </html>
 <hr>

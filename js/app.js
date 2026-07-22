@@ -17,7 +17,19 @@ app.controller("dashboardcontroller",function($scope){
             "CSE","MCA","MBA","EEE","BCA","ECE","IMCA"
         ];
         $scope.selectedDepartment="MCA";
-         $scope.addstudent=function(){
+        $scope.isDisabled=true;
+        $scope.allowAdmission=function(){
+            $scope.isDisabled=false;
+        };
+
+        $scope.isReadonly=true;
+        $scope.toggleReadonly=function(){
+            $scope.isReadonly=!$scope.isReadonly;
+        };
+
+        $scope.isReadonly=false;
+        $scope.addstudent=function(){
             $scope.totalStudents++;
+
     };
 });
