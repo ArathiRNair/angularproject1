@@ -12,5 +12,7 @@ app.controller("dashboardcontroller",function($scope){
     ];
     $scope.addstudent=function(){
         $scope.totalStudents++;
+        $scope.showStudents=true;
+        $scope.showDashboard=true;
     };
 });

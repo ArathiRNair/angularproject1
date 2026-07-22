@@ -20,12 +20,18 @@
     <button ng-click="totalFaculty=totalFaculty+1">ADD STUDENT</button>
      
     <h2>Student List</h2>
-    <ul>
+    <button ng-click="showstudents= !showstudents">
+show/hide students
+
+
+    </button>
+    <div ng-if="showDashboard = !showDashboard">
+    <ul ng-hide="showstudents">
+        
         <li ng-repeat="student in students">
             {{student}}
         </li>
-
-
     </ul>
+    </div>
 </body>
 </html>
