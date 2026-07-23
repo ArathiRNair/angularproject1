@@ -27,7 +27,8 @@ app.controller("dashboardcontroller",function($scope){
             $scope.isReadonly=!$scope.isReadonly;
         };
 
-        $scope.isReadonly=false;
+        $scope.student={};
+
         $scope.addstudent=function(){
             $scope.totalStudents++;
 
