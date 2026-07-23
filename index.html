@@ -79,6 +79,65 @@
        toggle readonly
      </button>
      <p>readonly status: {{isReadonly}}</p>
+     <hr
+     <br><br>
+     <h2>STUDENT REGISTRATION</h2>
+     <form name="studentForm">
+        <label>Student Name</label>
+        <input type="text" ng-model="student.name" required>
+        <br><br>
+        <label>Student Age</label>
+        <input type="number" ng-model="student.age" required>
+        <br><br>
+        <label>Student Email</label>
+        <input type="email" ng-model="student.email" required>
+        <br><br>
+        <label>Phone Number</label>
+        <input type="text" ng-model="student.phone" required>
+        <br><br>
+        <label>Department</label>
+        <select ng-model="student.department" required>
+        <option value="MCA">Master of Computer Application</option>
+        <option value="CSE">Computer Science and Engineering</option>   
+        <option value="MBA">Master of Business Administration</option>
+        <opion value="IMCA">Integrated Master of Computer Application</option>
+        <option value="EEE">Electrical and Electronics Engineering</option>
+        <option value="ECE">Electronics and Communication Engineering</option>  
+        </select>  
+        <br><br> 
+        <label>Gender</label>
+        <input type="radio" ng-model="student.gender" value="male" required>Male
+        <input type="radio" ng-model="student.gender" value="female" required>Female
+        <br><br>
+        <label>Address</label>
+        <textarea ng-model="student.address" required></textarea>
+        <br><br>
+        <button type="submit">Register Student</button>
+        </form>
+        <hr
+        <br><br>
+        <h2>form status</h2>
+        <p>
+            valid:{{studentForm.$valid}}
+        </p>
+        <p>
+            invalid:{{studentForm.$invalid}}    
+        </p>
+        <p>
+            pristine:{{studentForm.$pristine}}
+        </p>    
+        <p>
+            dirty:{{studentForm.$dirty}}
+        </p>
+        <p ng-show="studentForm.studentForm.$touched && studentForm.studentForm.$invalid" style="color:red">
+            Name is required
+        </p>    
+
+
+
+
+
+
 </body>
 </html>
 <hr>
